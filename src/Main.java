@@ -1,3 +1,4 @@
+import static CodeWars.ArithmeticProgression.abbrevName;
 import static CodeWars.ArithmeticProgression.findMissing;
 import static JavaPracticeQA.HelloSun.countNum;
 
@@ -6,7 +7,10 @@ public class Main {
 
        // findMissing(new int[]{1, 1, 1});
         //System.out.println("Hello world!");
-        countNum("Привет солнце");
+        //countNum("Привет солнце");
+
+        System.out.println(abbrevName("patrick feeney"));
+
     }
 
 
