@@ -1,5 +1,7 @@
 package CodeWars;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public class ArithmeticProgression {
@@ -30,16 +32,16 @@ public class ArithmeticProgression {
 
         for (int i = 1; i < numbers.length; i++) {
 
-            miss = numbers[i - 1] + diff;
+            //miss = numbers[i - 1] + diff;
 
             if (numbers[i] != miss) {
-
+                miss = numbers[i - 1] + diff;
                 break;
             }
         }
 
         System.out.println("miss: "+miss);
-        
+
         return miss;
     }
 
@@ -58,5 +60,58 @@ public class ArithmeticProgression {
 
         return false;
 
+    }
+
+    // "abacaa" k = 2
+    public static String getMaxSubstring(int k, String sourceStr) {
+
+        List<String> arrStr = new ArrayList<>();
+        String str = "";
+        int unique = 0;
+        int len = 0;
+        String result = null;
+
+        while (len < sourceStr.length()) {
+
+            for (int i = len; i < sourceStr.length(); i++) {
+
+                if (!str.contains(String.valueOf(sourceStr.charAt(i))) && unique < k) {
+
+                    unique++;
+
+                    str += sourceStr.charAt(i);
+
+                } else if (str.contains(String.valueOf(sourceStr.charAt(i)))) {
+
+                    str += sourceStr.charAt(i);
+
+                } else {
+
+                    break;
+                }
+
+            }
+
+            arrStr.add(str);
+            unique = 0;
+            str = "";
+            len++;
+
+        }
+
+        result = arrStr.get(0);
+
+        for (int i = 1; i < arrStr.size(); i++) {
+
+            if (result.length() < arrStr.get(i).length()) {
+
+                result = arrStr.get(i);
+
+            }
+        }
+
+        System.out.print(result);
+
+        return result;
     }
 }
