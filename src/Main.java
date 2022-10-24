@@ -1,6 +1,9 @@
 import static CodeWars.ArithmeticProgression.*;
 import static JavaPracticeQA.HelloSun.countNum;
 import static SDETinterview.Example.swapLines;
+import static CodeWars.ArrayString.*;
+
+
 
 public class Main {
     public static void main(String[] args) {
@@ -12,11 +15,15 @@ public class Main {
         //System.out.println(abbrevName("patrick feeney"));
 
         //findMissingTwo(new int[]{-91, -134, -177, -220, -263, -306, -349, -392, -435, -478, -564, -607, -650, -693, -736, -779, -822, -865, -908, -951, -994, -1037, -1080, -1123});
-        findMissingTwo(new int[]{1, 2, 4, 5});
+        //findMissingTwo(new int[]{1, 2, 4, 5});
 
         //getMaxSubstring(2, "abacaa");
 //String str = "Hello \nHello World\nHello My World\nMy Beautiful World\nTwinkle twinkle little star how middle I wonder what you are";
         //swapLines(str, 5);
+
+        //System.out.println(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+
+        System.out.println(getXO("Xxxooo"));
 
     }
 
